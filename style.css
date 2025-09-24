@@ -124,8 +124,11 @@ main {
   display: flex;
   gap: var(--15px);
 }
-#bottom-articles section div {
-  width: 50%;
+.image-container {
+  width: 30%;
+}
+.text-container {
+  width: 70%;
 }
 #bottom-articles section div img {
   width: 100%;
@@ -137,13 +140,13 @@ span {
 }
 h4 {
   color: var(--very-dark-blue);
-  margin-block: 0;
-  font-size: var(--24px);
+  margin-block: var(--15px);
+  font-size: 1.2rem;
   cursor: pointer;
 }
 h4:hover {
   color: var(--soft-red);
 }
-#bottom-articles section div p {
+.text-container p {
   color: var(--dark-grayish-blue);
 }
