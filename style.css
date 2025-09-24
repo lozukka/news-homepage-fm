@@ -26,6 +26,7 @@
   --15px: 0.938rem;
   --16px: 1rem;
   --24px: 1.5rem;
+  --32px: 2rem;
   --48px: 3rem;
   --soft-orange: hsl(35, 77%, 62%);
   --soft-red: hsl(5, 85%, 63%);
@@ -86,4 +87,31 @@ main {
 #main-article a:hover {
   color: var(--off-white);
   background: var(--very-dark-blue);
+}
+#side-articles {
+  background: var(--very-dark-blue);
+  color: var(--off-white);
+  padding: var(--16px);
+}
+#side-articles h2 {
+  color: var(--soft-orange);
+  font-size: var(--32px);
+  margin-block: var(--15px);
+}
+#side-articles section {
+  border-bottom: 1px solid var(--off-white);
+  padding: var(--16px) 0;
+}
+#side-articles section:last-child {
+  border-bottom: none;
+}
+#side-articles section h3 {
+  cursor: pointer;
+}
+#side-articles section h3:hover {
+  cursor: pointer;
+  color: var(--soft-orange);
+}
+#side-articles section p {
+  color: var(--grayish-blue);
 }
