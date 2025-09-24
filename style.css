@@ -139,6 +139,10 @@ h4 {
   color: var(--very-dark-blue);
   margin-block: 0;
   font-size: var(--24px);
+  cursor: pointer;
+}
+h4:hover {
+  color: var(--soft-red);
 }
 #bottom-articles section div p {
   color: var(--dark-grayish-blue);
