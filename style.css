@@ -115,3 +115,17 @@ main {
 #side-articles section p {
   color: var(--grayish-blue);
 }
+#bottom-articles section {
+  display: flex;
+}
+#bottom-articles section div {
+  width: 50%;
+}
+#bottom-articles section div img {
+  width: 100%;
+}
+span {
+  color: var(--soft-red);
+  font-size: var(--32px);
+  font-weight: 600;
+}
