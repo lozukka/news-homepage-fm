@@ -111,6 +111,8 @@ nav {
 }
 #mobile-nav {
   cursor: pointer;
+  background: none;
+  border: none;
 }
 #mobile-nav-wrapper.show,
 nav.show {
