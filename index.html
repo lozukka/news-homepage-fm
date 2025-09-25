@@ -16,6 +16,7 @@
   </head>
   <body>
     <header>
+      <a href="#main-content" class="skip-link">Skip to main content</a>
       <div>
         <svg width="65" height="40" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -24,7 +25,12 @@
           />
         </svg>
       </div>
-      <div id="mobile-nav">
+      <div
+        id="mobile-nav"
+        aria-label="open sidebar"
+        aria-expanded="false"
+        aria-controls="navbar"
+      >
         <svg width="40" height="17" xmlns="http://www.w3.org/2000/svg">
           <g fill="#00001A" fill-rule="evenodd">
             <path d="M0 0h40v3H0zM0 7h40v3H0zM0 14h40v3H0z" />
@@ -34,7 +40,7 @@
       </div>
 
       <nav>
-        <div id="close-nav">
+        <div id="close-nav" aria-label="close sidebar">
           <svg width="32" height="31" xmlns="http://www.w3.org/2000/svg">
             <g fill="#00001A" fill-rule="evenodd">
               <path d="m2.919.297 28.284 28.284-2.122 2.122L.797 2.419z" />
@@ -48,9 +54,9 @@
         <a href="#">Trending</a>
         <a href="#">Categories</a>
       </nav>
-      <div id="mobile-nav-wrapper"></div>
+      <div id="mobile-nav-wrapper" aria-hidden="true"></div>
     </header>
-    <main>
+    <main id="main-content">
       <section id="main-article">
         <div id="main-article-img"></div>
         <h1>The Bright Future of Web 3.0?</h1>
