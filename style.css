@@ -129,7 +129,7 @@ main {
   #main-article h1 {
     grid-area: heading;
     margin-top: var(--16px);
-    font-size: 4rem;
+    font-size: 3.7rem;
   }
 }
 #main-article p {
@@ -211,6 +211,7 @@ main {
     grid-area: bottom;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
   }
 }
 #bottom-articles section {
