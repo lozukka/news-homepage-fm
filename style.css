@@ -122,6 +122,8 @@ nav.show {
 #close-nav {
   align-self: flex-end;
   margin-bottom: var(--24px);
+  background: none;
+  border: none;
 }
 nav a {
   text-decoration: none;
