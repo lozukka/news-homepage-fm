@@ -61,7 +61,15 @@ nav {
 }
 @media (min-width: 87.5rem) {
   nav {
-    display: block;
+    display: flex;
+    gap: var(--48px);
+  }
+  nav a {
+    text-decoration: none;
+    color: var(--grayish-blue);
+  }
+  nav a:hover {
+    color: var(--soft-orange);
   }
 }
 main {
@@ -129,7 +137,7 @@ main {
   #main-article h1 {
     grid-area: heading;
     margin-top: var(--16px);
-    font-size: 3.7rem;
+    font-size: 3rem;
   }
 }
 #main-article p {
