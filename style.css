@@ -51,14 +51,32 @@ nav {
   display: none;
 }
 main {
-  padding: var(--24px) var(--16px);
+  padding: 0 var(--16px) var(--24px);
   display: flex;
   flex-direction: column;
   gap: var(--48px);
 }
+@media (min-width: 1400px) {
+  main {
+    display: grid;
+    grid-template:
+      "main main aside" 150px
+      "main main aside" 150px
+      "bottom bottom bottom" 150px;
+    width: 90vw;
+    margin: auto;
+  }
+}
 #main-article {
   display: flex;
   flex-direction: column;
+}
+@media (min-width: 1400px) {
+  #main-article {
+    grid-area: main;
+    height: 100%;
+    width: 100%;
+  }
 }
 #main-article div img {
   width: 100%;
@@ -68,9 +86,12 @@ main {
   font-weight: 800;
   font-size: var(--48px);
   margin-block: var(--16px);
+  line-height: 1;
 }
 #main-article p {
   color: var(--dark-grayish-blue);
+  line-height: 1.7;
+  font-size: var(--16px);
 }
 #main-article a {
   background: var(--soft-red);
@@ -80,7 +101,7 @@ main {
   width: 150px;
   font-weight: 700;
   text-transform: uppercase;
-  margin-top: var(--16px);
+  margin-top: var(--24px);
   text-align: center;
   cursor: pointer;
 }
@@ -93,20 +114,26 @@ main {
   color: var(--off-white);
   padding: var(--16px);
 }
+@media (min-width: 1400px) {
+  #side-articles {
+    grid-area: aside;
+  }
+}
 #side-articles h2 {
   color: var(--soft-orange);
   font-size: var(--32px);
   margin-block: var(--15px);
 }
 #side-articles section {
-  border-bottom: 1px solid var(--off-white);
-  padding: var(--16px) 0;
+  border-bottom: 1px solid var(--grayish-blue);
+  padding: var(--24px) 0;
 }
 #side-articles section:last-child {
   border-bottom: none;
 }
 #side-articles section h3 {
   cursor: pointer;
+  font-size: var(--24px);
 }
 #side-articles section h3:hover {
   cursor: pointer;
@@ -114,21 +141,29 @@ main {
 }
 #side-articles section p {
   color: var(--grayish-blue);
+  margin-top: var(--16px);
+  font-size: var(--16px);
 }
 #bottom-articles {
   display: flex;
   flex-direction: column;
-  gap: var(--15px);
+  gap: var(--32px);
+}
+@media (min-width: 1400px) {
+  #bottom-articles {
+    grid-area: bottom;
+    flex-direction: row;
+  }
 }
 #bottom-articles section {
   display: flex;
-  gap: var(--15px);
+  gap: var(--24px);
 }
 .image-container {
-  width: 30%;
+  width: 35%;
 }
 .text-container {
-  width: 70%;
+  width: 65%;
 }
 #bottom-articles section div img {
   width: 100%;
@@ -140,7 +175,7 @@ span {
 }
 h4 {
   color: var(--very-dark-blue);
-  margin-block: var(--15px);
+  margin-block: 0.8rem;
   font-size: 1.2rem;
   cursor: pointer;
 }
@@ -149,4 +184,5 @@ h4:hover {
 }
 .text-container p {
   color: var(--dark-grayish-blue);
+  line-height: 2;
 }
