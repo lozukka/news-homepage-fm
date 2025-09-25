@@ -45,17 +45,24 @@
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: var(--24px) var(--16px);
   max-width: 25rem;
   margin: auto;
 }
 @media (min-width: 87.5rem) {
   header {
-    max-width: 90vw;
+    max-width: 78.75rem;
+    padding: var(--24px) 0;
   }
 }
 nav {
   display: none;
+}
+@media (min-width: 87.5rem) {
+  nav {
+    display: block;
+  }
 }
 main {
   padding: 0 var(--16px) var(--24px);
@@ -72,9 +79,10 @@ main {
       "main main aside" 13rem
       "main main aside" 13rem
       "bottom bottom bottom" 12.5rem;
-    max-width: 90vw;
+    max-width: 78.75rem;
     gap: 2.5rem;
     margin: auto;
+    padding: 0;
   }
 }
 #main-article {
@@ -86,6 +94,12 @@ main {
     grid-area: main;
     height: 100%;
     width: 100%;
+    display: grid;
+    grid-template:
+      "img img"
+      "heading text"
+      "heading link";
+    column-gap: 2.5rem;
   }
 }
 #main-article-img {
@@ -99,6 +113,7 @@ main {
 @media (min-width: 87.5rem) {
   #main-article-img {
     background-image: url("./assets/images/image-web-3-desktop.jpg");
+    grid-area: img;
   }
 }
 #main-article h1 {
@@ -108,10 +123,24 @@ main {
   margin-block: var(--16px);
   line-height: 1;
 }
+@media (min-width: 87.5rem) {
+  #main-article h1 {
+    grid-area: heading;
+    margin-top: var(--16px);
+  }
+}
 #main-article p {
   color: var(--dark-grayish-blue);
   line-height: 1.7;
   font-size: var(--16px);
+}
+@media (min-width: 87.5rem) {
+  #main-article p {
+    grid-area: text;
+    font-size: var(--15px);
+    margin-right: var(--15px);
+    padding-top: var(--15px);
+  }
 }
 #main-article a {
   background: var(--soft-red);
@@ -124,6 +153,11 @@ main {
   margin-top: var(--24px);
   text-align: center;
   cursor: pointer;
+}
+@media (min-width: 87.5rem) {
+  #main-article a {
+    grid-area: link;
+  }
 }
 #main-article a:hover {
   color: var(--off-white);
@@ -172,7 +206,8 @@ main {
 @media (min-width: 87.5rem) {
   #bottom-articles {
     grid-area: bottom;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 #bottom-articles section {
