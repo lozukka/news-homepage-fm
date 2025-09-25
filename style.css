@@ -76,13 +76,15 @@ main {
   main {
     display: grid;
     grid-template:
-      "main main aside" 13rem
-      "main main aside" 13rem
-      "bottom bottom bottom" 12.5rem;
+      "main main aside"
+      "main main aside"
+      "bottom bottom bottom";
     max-width: 78.75rem;
-    gap: 2.5rem;
+    column-gap: 2.5rem;
+    row-gap: 4rem;
     margin: auto;
     padding: 0;
+    margin-bottom: 4rem;
   }
 }
 #main-article {
@@ -127,6 +129,7 @@ main {
   #main-article h1 {
     grid-area: heading;
     margin-top: var(--16px);
+    font-size: 4rem;
   }
 }
 #main-article p {
